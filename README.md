@@ -10,9 +10,9 @@ Training was performed using Stochastic Gradient Descent (SGD) with learning rat
 輸入圖像被縮放至[256 ,256]   使用SGD，學習率0.001  
 
 ## **Use Model**  
-+ FCN8S    
-+ FCN32S  
-+ UNet  
++ [FCN8S](https://github.com/bat67/pytorch-FCN-easiest-demo)
++ [FCN32S](https://github.com/bat67/pytorch-FCN-easiest-demo)
++ [UNet](https://medium.com/analytics-vidhya/pytorch-implementation-of-semantic-segmentation-for-single-class-from-scratch-81f96643c98c)  
 + UNet++  
 + ResUnet  
 
