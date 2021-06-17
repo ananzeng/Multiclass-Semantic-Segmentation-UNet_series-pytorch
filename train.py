@@ -66,7 +66,7 @@ def train():
         train_loss = 0
         cnn.train()
 
-        for index, (img, mask) in enumerate(train_loader):
+        for index, (img, mask, mask_path) in enumerate(train_loader):
             img = img.to(device)                        #把img送到gpu
             mask = mask.to(device)                      #把mask送到gpu
             mask = mask.long()
@@ -84,7 +84,7 @@ def train():
         test_loss = 0
         cnn.eval()
         with torch.no_grad():
-            for index, (img, mask) in enumerate(vaild_loader):
+            for index, (img, mask, mask_path) in enumerate(vaild_loader):
                 img = img.to(device)
                 mask = mask.to(device)
                 mask = mask.long()

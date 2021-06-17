@@ -42,8 +42,8 @@ class CustomDataset(data.Dataset):
         mask = torch.from_numpy(np.array(mask))
         mask = self.mask_to_class(mask)
     
-        return t_image, mask
-
+        return t_image, mask, self.mask[index]
+        
     def __len__(self):  # return count of sample we have
         return len(self.img)
 
