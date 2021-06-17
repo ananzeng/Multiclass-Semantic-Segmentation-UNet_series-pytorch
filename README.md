@@ -5,6 +5,9 @@ run test.py   執行test.py即可使用所訓練的pt檔預測輸出，輸出目
 run eval.py   執行eval.py即可評估dataset/result內的輸出圖像跟ground trust圖像，將會在目錄輸出Model_Predict.txt，內含Average Pixel Accuracy | classPixelAccuracy | Average Mean Accuracy | Average Mean IU    
   
 ## **Implementation Details**  
+Python 3.6  
+Pytorch 1.8  
+Cuda 10.2  
 input images are resized to [256 ,256]   
 Training was performed using Stochastic Gradient Descent (SGD) with learning rate 0.001    
 輸入圖像被縮放至[256 ,256]   使用SGD，學習率0.001  
