@@ -19,12 +19,20 @@ Training was performed using Stochastic Gradient Descent (SGD) with learning rat
 ## **Dataset**  
 The dataset is divided into three parts: 160 images for the training set and 40 images for the validation set
 The dataset is to segment 4 classes such as circle,square,triangle,star  
-資料及被分為160用來訓練，40張用來驗證，並且有4個類[circle,square,triangle,star]  
+資料集被分為160用來訓練，40張用來驗證，並且有4個類[circle,square,triangle,star]  
 Their corresponding grayscale values are
-|Class | Grayscale|
+|Model | Grayscale|
 |---- | ----|
 |circle | 100|
 |square |  250|
 |triangle |  255|
-|star |  200|  ![avatar](/home/picture/1.png)
+|star |  200| 
+  
+## **Result**  　　
+|Class | Average Pixel Accurac|Average Mean Accuracy|
+|---- | ----|----|
+|FCN8S | 0.992|0.860|  
+
+![images](dataset/data_shape/vaild_annot_mask/162.json_mask.png)  ![images](dataset/result/162.json_mask.png_predict.png)  
+　　　　　Ground Trust 　　　　　　　　　　Predict Image
 
