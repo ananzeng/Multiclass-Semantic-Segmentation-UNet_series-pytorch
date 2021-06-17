@@ -34,7 +34,7 @@ Their corresponding grayscale values are
 ## **Result**  　　
 |Class | Average Pixel Accurac|Average Mean Accuracy|
 |---- | ----|----|
-|FCN8S | 0.992|0.860|  
+|FCN8S | 0.979|0.807|  
 
 ![images](dataset/data_shape/vaild_annot_mask/162.json_mask.png)  ![images](dataset/result/162.json_mask.png_predict.png)  
 　　　　　Ground Trust 　　　　　　　　　　Predict Image
