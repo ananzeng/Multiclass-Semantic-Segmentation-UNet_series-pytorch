@@ -26,5 +26,5 @@ Their corresponding grayscale values are
 |circle | 100|
 |square |  250|
 |triangle |  255|
-|star |  200|  
+|star |  200|  ![avatar](/home/picture/1.png)
 
