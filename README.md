@@ -17,7 +17,7 @@ Training was performed using Stochastic Gradient Descent (SGD) with learning rat
 + [FCN32S](https://github.com/bat67/pytorch-FCN-easiest-demo)
 + [UNet](https://medium.com/analytics-vidhya/pytorch-implementation-of-semantic-segmentation-for-single-class-from-scratch-81f96643c98c)  
 + [UNet++](https://github.com/4uiiurz1/pytorch-nested-unet)
-+ ResUnet  
++ [ResUnet](https://github.com/galprz/brain-tumor-segmentation)  
 
 ## **Dataset**  
 The dataset is divided into three parts: 160 images for the training set and 40 images for the validation set
