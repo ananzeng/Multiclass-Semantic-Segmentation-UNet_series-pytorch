@@ -9,19 +9,12 @@ from PIL import Image
 from torchinfo import summary
 import torch.nn as nn
 import torch.nn.functional as F
-from Model_Zoo import FCN_Model, ResUnet, Unet_Plus, Unet
+from Model_Zoo import FCN_Model, ResUnet, Unet_Plus
 
 #set up model
 fcn8s = FCN_Model.FNC_8S(input_channel = 3,output_channel = 5)
 fcn32s = FCN_Model.FNC_32S(input_channel = 3,output_channel = 5)
-unet = Unet.UNet(in_channels=3,
-                 out_channels=5,
-                 n_blocks=4,
-                 start_filters=32,
-                 activation='relu',
-                 normalization='batch',
-                 conv_mode='same',
-                 dim=2)
+unet = Unet_Plus.UNet(input_channel = 3,output_channel = 5)
 unet_plus = Unet_Plus.NestedUNet(input_channel = 3,output_channel = 5)
 resunet = ResUnet.ResUNet(input_channel = 3,output_channel = 5)
 deepresunet = ResUnet.DeepResUNet(input_channel = 3,output_channel = 5)
