@@ -1,0 +1,2 @@
+Average Pixel Accuracy | classPixelAccuracy | Average Mean Accuracy | Average Mean IU  
+0.9822341918945312 | [0.99822173 0.79769472 0.85297831 0.68766339 0.80058657] | 0.827428945913368 | 0.7821891356531563 | 
