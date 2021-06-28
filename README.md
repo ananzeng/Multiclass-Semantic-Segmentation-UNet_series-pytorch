@@ -1,4 +1,4 @@
-# Semantic-Segmentation_FCN_Unet_ResUnet
+# Multiclass-Semantic-Segmentation-UNet_series-pytorch
 Semantic-Segmentation-Multiclass_FCN_Unet_ResUnet(Multiclass)  
 run train.py 執行train.py即可訓練  
 run test.py   執行test.py即可使用所訓練的pt檔預測輸出，輸出目錄為dataset/result，檔名會新增_predict以辨識  
