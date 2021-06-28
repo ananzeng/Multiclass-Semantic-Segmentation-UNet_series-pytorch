@@ -32,9 +32,13 @@ Their corresponding grayscale values are
 |star |  200| 
   
 ## **Result**  　　
-|Model | Average Pixel Accurac|Average Mean Accuracy|
-|---- | ----|----|
-|FCN8S | 0.979|0.807|  
+|Model | Average Pixel Accuracy|Average Mean Accuracy|Circle Accuracy|Square Accuracy|Triangle Accuracy|Star Accuracy|Background Accuracy|
+|---- | ----|----|---- | ----|----|----|----|
+|FCN8S | 0.941|0.413|0.120|0.438|  0.186|0.323|0.998|
+|FCN32S | 0.934|0.331|0.176|0.333|  0.036|0.112|0.998|
+|UNet | 0.980|0.827|0.791|0.838|  0.733|0.775|0.996|
+|UNet_Plus | 0.979|0.802|0.770|0.851|  0.694|0.696|0.997|
+|ResUNet | 0.982|0.827|0.797|0.852|  0.687|0.800|0.998|
 
 ![images](dataset/data_shape/vaild_annot_mask/162.json_mask.png)  ![images](dataset/result/162.json_mask.png_predict.png)  
 　　　　　Ground Trust 　　　　　　　　　　Predict Image
