@@ -41,7 +41,7 @@ Their corresponding grayscale values are
 |ResUNet | 0.982|0.827|0.797|0.852|  0.687|0.800|0.998|
 
 ![images](dataset/data_shape/vaild_annot_mask/166.json_mask.png)  ![images](doc/fcn8s_166.json_mask_predict.png)    ![images](doc/fcn32s_166.json_mask_predict.png)  
-　　　　　Ground Trust 　　　　　　　　　　   　    FCN8S 　　　　　　　　　　   　 　 FCN32S
+　　　　　Ground Truth 　　　　　　　　　　   　    FCN8S 　　　　　　　　　　   　 　 FCN32S
 
 ![images](doc/unet_166.json_mask_predict.png)  ![images](doc/unetplus_166.json_mask_predict.png)  ![images](doc/resunet_166.json_mask_predict.png)    
 　　　　　 　 　UNet 　　　　　　　　　　   　      　UNet Plus 　　　　　　　　　　   　  ResUNet
