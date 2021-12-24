@@ -1,4 +1,16 @@
 # Multiclass-Semantic-Segmentation-UNet_series-pytorch
+
+2021/12/24增加內容  
+更改test.py 解決model無法正確載入問題  
+modify test.py solve model can't load correctlt  
+增加fcn8, fcn32, UNet, UNet++訓練300 epochs之權重  
+add fcn8, fcn32, UNet, UNet++ weight with train 300 epochs  
+增加fcn8, fcn32, UNet, UNet++之預測圖片  
+add fcn8, fcn32, UNet, UNet++ predict images  
+增加fcn8, fcn32, UNet, UNet++之預測圖片使用eval.py所產生之txt檔案  
+add fcn8, fcn32, UNet, UNet++ performance txt file produce by eval.py using predict images  
+
+
 Semantic-Segmentation-Multiclass_FCN_Unet_ResUnet(Multiclass)  
 run train.py 執行train.py即可訓練  
 run test.py   執行test.py即可使用所訓練的pt檔預測輸出，輸出目錄為dataset/result，檔名會新增_predict以辨識  
