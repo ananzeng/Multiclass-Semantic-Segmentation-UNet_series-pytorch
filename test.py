@@ -9,22 +9,17 @@ from PIL import Image
 from torchinfo import summary
 import torch.nn as nn
 import torch.nn.functional as F
-from Model_Zoo import FCN_Model, ResUnet, Unet_Plus, Unet
+from Model_Zoo import FCN_Model, ResUnet, Unet_Plus
+
 
 #set up model
 fcn8s = FCN_Model.FNC_8S(input_channel = 3,output_channel = 5)
 fcn32s = FCN_Model.FNC_32S(input_channel = 3,output_channel = 5)
-unet = Unet.UNet(in_channels=3,
-                 out_channels=5,
-                 n_blocks=4,
-                 start_filters=32,
-                 activation='relu',
-                 normalization='batch',
-                 conv_mode='same',
-                 dim=2)
+unet = Unet_Plus.UNet(input_channel = 3,output_channel = 5)
 unet_plus = Unet_Plus.NestedUNet(input_channel = 3,output_channel = 5)
 resunet = ResUnet.ResUNet(input_channel = 3,output_channel = 5)
 deepresunet = ResUnet.DeepResUNet(input_channel = 3,output_channel = 5)
+
 
 #set up hyper
 epoch = 301
@@ -32,7 +27,7 @@ image_size = (256,256)
 lr = 1e-2
 weight_decay = 1e-4
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
+#torch.load with map_location=torch.device('cpu')
 #set up dataset 
 from  Dataset import CustomDataset
 train_dataset = CustomDataset("dataset/data_shape/train_image", "dataset/data_shape/train_annot_mask", image_size = image_size)
@@ -51,6 +46,7 @@ torch.cuda.manual_seed_all(seed)
 np.random.seed(seed)
 torch.backends.cudnn.benchmark = False
 torch.backends.cudnn.deterministic = True
+
 mapping = {
     0: 0,  
     1: 100,
@@ -69,8 +65,8 @@ def test():
     average_precision = 0
     print("資料總數：", len(test_loader))
     #model_name = os.path.join(os.getcwd(),'model/unet_self_model_60_shape.pt') #問學長model_load就夠了嗎?
-    model_name = os.path.join(os.getcwd(),'checkpoints/model_140.pt') #問學長model_load就夠了嗎?
-    cnn = torch.load(model_name)
+    model_name = os.path.join(os.getcwd(),'checkpoints/unet_plus.pt') #問學長model_load就夠了嗎?
+    cnn = torch.load(model_name,map_location ='cpu')
     optimizer = torch.optim.SGD(cnn.parameters(), lr=1e-2, weight_decay=1e-4)
     cnn.eval()
     with torch.no_grad():

@@ -7,7 +7,7 @@ import cv2
 if __name__ == '__main__':
     #classes_color_gray = [200, 100, 50, 150]
     #classes = ["Uterus", "Ovary", "Colon", "UterineTube"]
-    predict_path = os.path.join("dataset", "result")#maskrcnn_15 #maskscroingrcnn_30
+    predict_path = os.path.join("dataset", "result_fcn8s")#maskrcnn_15 #maskscroingrcnn_30
     ground_trust_path = os.path.join("dataset", "data_shape", "vaild_annot_mask")
     print("predict_path", predict_path)
     print("ground_trust_path", ground_trust_path)
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     print("classPixelAccuracy", classacc)
     print("meanPixelAccuracy", macc)
     print("meanIntersectionOverUnion", miu)
-    f = open('Model_Result.txt', 'w')
+    f = open('result_fcn8s.txt', 'w')
     f.write(str("Average Pixel Accuracy | classPixelAccuracy | Average Mean Accuracy | Average Mean IU  \n"))
     f.write(str(acc) + " | ")
     f.write(str(classacc) + " | ")
