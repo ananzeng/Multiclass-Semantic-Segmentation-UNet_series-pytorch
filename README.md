@@ -1,4 +1,8 @@
 # Multiclass-Semantic-Segmentation-UNet_series-pytorch
+要做的
+from torchinfo import summary刪除
+增加訓練教學
+測試結合image
 
 2021/12/24增加內容  
 更改test.py 解決model無法正確載入問題  
